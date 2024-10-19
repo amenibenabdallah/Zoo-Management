@@ -37,10 +37,16 @@ public class ZooManagement {
         System.out.println("test comapare zoo: "+ Zoo.comparerZoo(myZoo,zoo2));
 
         // PROSIT 5
-        Aquatic A=new Aquatic();
-        Terrestrial T=new Terrestrial();
-        Dolphin D=new Dolphin();
-        Penguin P=new Penguin();
+        System.out.println("test Affichage prosit 5");
+        Aquatic aquaticAnimal = new Aquatic("Fish", "Clownfish", 2, false, "Coral Reef");
+        System.out.println(aquaticAnimal);
+        Dolphin dolphin = new Dolphin("Cetacea", "Bottlenose Dolphin", 10, true, "Ocean", 25.5f);
+        System.out.println(dolphin);
+        Penguin penguin = new Penguin("Spheniscidae", "Emperor Penguin", 5, false, "Antarctic", 200f);
+        System.out.println(penguin);
+        Terrestrial lion2 = new Terrestrial("Felidae", "Lion", 8, true, 4);
+        System.out.println(lion2);
+
 
 
     }

@@ -10,10 +10,13 @@ public class Penguin extends Aquatic {
         this.swimmingDepth=swimmingDepth;
     }
 
+    public String toString(){
+        return super.toString()+" , swimmingDepth: "+swimmingDepth;
+    }
     public Penguin(){}
 
-    public Penguin(String family,String name,int age,boolean isMammal,String habitat,float swimmingSpeed){
+    public Penguin(String family,String name,int age,boolean isMammal,String habitat,float swimmingDepth){
         super(family,name,age,isMammal,habitat);
-        this.swimmingDepth=swimmingSpeed;
+        this.swimmingDepth=swimmingDepth;
     }
 }
