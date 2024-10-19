@@ -1,6 +1,19 @@
 package tn.esprit.gestionZoo.entities;
 
 public class Terrestrial extends Animal {
-    int nbrLegs;
+    private int nbrLegs;
+
+    public int getNbrLegs(){
+        return this.nbrLegs;
+    }
+    public void setNbrLegs(int nbrLegs){
+        this.nbrLegs=nbrLegs;
+    }
+
+    public Terrestrial(){}
+    public Terrestrial(String family,String name,int age,boolean isMammal,int nbrLegs){
+        super(family,name,age,isMammal);
+        this.nbrLegs=nbrLegs;
+    }
 
 }
