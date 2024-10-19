@@ -2,6 +2,14 @@ package tn.esprit.gestionZoo.main;
 
 import tn.esprit.gestionZoo.entities.Animal;
 import tn.esprit.gestionZoo.entities.Zoo;
+import tn.esprit.gestionZoo.entities.Aquatic;
+import tn.esprit.gestionZoo.entities.Terrestrial;
+import tn.esprit.gestionZoo.entities.Dolphin;
+import tn.esprit.gestionZoo.entities.Penguin;
+
+
+
+
 public class ZooManagement {
     public static void main(String[] args) {
 
@@ -28,6 +36,11 @@ public class ZooManagement {
         System.out.println("test isFull zoo: "+myZoo.isZooFull());
         System.out.println("test comapare zoo: "+ Zoo.comparerZoo(myZoo,zoo2));
 
+        // PROSIT 5
+        Aquatic A=new Aquatic();
+        Terrestrial T=new Terrestrial();
+        Dolphin D=new Dolphin();
+        Penguin P=new Penguin();
 
 
     }
