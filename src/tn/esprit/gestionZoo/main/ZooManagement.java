@@ -46,6 +46,9 @@ public class ZooManagement {
         System.out.println(penguin);
         Terrestrial lion2 = new Terrestrial("Felidae", "Lion", 8, true, 4);
         System.out.println(lion2);
+        aquaticAnimal.swim();
+        dolphin.swim();
+        penguin.swim();
 
 
 

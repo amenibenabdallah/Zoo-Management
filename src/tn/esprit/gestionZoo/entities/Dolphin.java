@@ -10,6 +10,10 @@ public class Dolphin extends Aquatic{
         this.swimmingSpeed=swimmingSpeed;
     }
 
+    public void swim(){
+        System.out.println("This dolphin is swimming.");
+    }
+
     public String toString(){
         return super.toString()+" , swimmingSpeed: "+swimmingSpeed;
     }
