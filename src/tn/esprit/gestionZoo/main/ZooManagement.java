@@ -38,17 +38,26 @@ public class ZooManagement {
 
         // PROSIT 5
         System.out.println("test Affichage prosit 5");
-        Aquatic aquaticAnimal = new Aquatic("Fish", "Clownfish", 2, false, "Coral Reef");
-        System.out.println(aquaticAnimal);
+
         Dolphin dolphin = new Dolphin("Cetacea", "Bottlenose Dolphin", 10, true, "Ocean", 25.5f);
         System.out.println(dolphin);
         Penguin penguin = new Penguin("Spheniscidae", "Emperor Penguin", 5, false, "Antarctic", 200f);
         System.out.println(penguin);
         Terrestrial lion2 = new Terrestrial("Felidae", "Lion", 8, true, 4);
         System.out.println(lion2);
-        aquaticAnimal.swim();
+
         dolphin.swim();
         penguin.swim();
+
+        //prosit 6
+
+        myZoo.addAquaticAnimal(dolphin);
+        myZoo.addAquaticAnimal(penguin);
+        System.out.println(myZoo.maxPenguinSwimmingDepth());
+        myZoo.displayNumberOfAquaticsByType();
+        System.out.println(penguin.equals(dolphin));
+
+
 
 
 
