@@ -8,44 +8,53 @@ public class ZooManagement {
 
 
 
-        Animal lion=new Animal("mammal","lion1",3,true);
+
         Zoo myZoo=new Zoo("fun tn.esprit.gestionZoo.entities.Zoo","LA");
         Zoo zoo2=new Zoo("hello zoo","carthage");
         myZoo.displayZoo();
         System.out.println(myZoo);
-        System.out.println(lion);
+
 
 
 
 
         myZoo.displayAnimeaux();
 
-        System.out.println("test search: "+myZoo.searchAnimal(lion));
-        System.out.println("test remove: "+myZoo.removeAnimal(lion));
+
         System.out.println("zoo after remove animal: "+myZoo);
         System.out.println("test isFull zoo: "+myZoo.isZooFull());
         System.out.println("test comapare zoo: "+ Zoo.comparerZoo(myZoo,zoo2));
 
         // PROSIT 5
         System.out.println("test Affichage prosit 5");
+        try{
+            Dolphin dolphin = new Dolphin("Cetacea", "Bottlenose Dolphin", 10, true, "Ocean", 25.5f);
+            System.out.println(dolphin);
+            Penguin penguin = new Penguin("Spheniscidae", "Emperor Penguin", 5, false, "Antarctic", 200f);
+            System.out.println(penguin);
+            Terrestrial lion2 = new Terrestrial("Felidae", "Lion", 8, true, 4);
+            System.out.println(lion2);
 
-        Dolphin dolphin = new Dolphin("Cetacea", "Bottlenose Dolphin", 10, true, "Ocean", 25.5f);
-        System.out.println(dolphin);
-        Penguin penguin = new Penguin("Spheniscidae", "Emperor Penguin", 5, false, "Antarctic", 200f);
-        System.out.println(penguin);
-        Terrestrial lion2 = new Terrestrial("Felidae", "Lion", 8, true, 4);
-        System.out.println(lion2);
+            dolphin.swim();
+            penguin.swim();
 
-        dolphin.swim();
-        penguin.swim();
+            //prosit 6
 
-        //prosit 6
+            myZoo.addAquaticAnimal(dolphin);
+            myZoo.addAquaticAnimal(penguin);
+            System.out.println(myZoo.maxPenguinSwimmingDepth());
+            myZoo.displayNumberOfAquaticsByType();
+            System.out.println(penguin.equals(dolphin));
+        }
+        catch (InvalidAgeException e){
+            System.out.println(e.getMessage());
+        }
 
-        myZoo.addAquaticAnimal(dolphin);
-        myZoo.addAquaticAnimal(penguin);
-        System.out.println(myZoo.maxPenguinSwimmingDepth());
-        myZoo.displayNumberOfAquaticsByType();
-        System.out.println(penguin.equals(dolphin));
+
+
+
+
+
 
         //prosit 7
         try{
@@ -57,10 +66,17 @@ public class ZooManagement {
             myZoo.addAnimal(animal3);
             Animal animal4 = new Animal("mammal","Giraffe", 7,true);
             myZoo.addAnimal(animal4);
+            Animal animalWithInvalidAge = new Animal("mammal", "Zebra", -20, true);
+            System.out.println(animalWithInvalidAge);
+
         }
         catch (ZooFullException e){
             System.out.println(e.getMessage());
         }
+        catch (InvalidAgeException e){
+            System.out.println("Invalid age error: " +e.getMessage());
+        }
+
 
 
 

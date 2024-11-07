@@ -27,8 +27,11 @@ public class Animal {
     public int getAge(){
         return this.age;
     }
-    public void setAge(int age){
-        if(age>0)
+    public void setAge(int age) throws InvalidAgeException{
+        if(age < 0){
+            System.out.println("InvalidAgeException should be thrown here");
+            throw new InvalidAgeException("age must be greater or equal to 0");
+        }
         this.age=age;
     }
 
@@ -43,10 +46,10 @@ public class Animal {
         return "family: "+family+", name: "+name+", isMammal: "+isMammal;
     }
     public Animal(){}
-    public Animal(String family,String name,int age,boolean isMammal){
+    public Animal(String family,String name,int age,boolean isMammal) throws InvalidAgeException{
         this.family=family;
         this.name=name;
-        this.age=age;
+        this.setAge(age);
         this.isMammal=isMammal;
     }
 }
