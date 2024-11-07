@@ -24,8 +24,6 @@ public class ZooManagement {
         myZoo.displayZoo();
         System.out.println(myZoo);
         System.out.println(lion);
-        System.out.println(myZoo.addAnimal(lion));
-        System.out.println(myZoo.addAnimal(lion));
         myZoo.addAnimal(test);
 
         myZoo.displayAnimeaux();

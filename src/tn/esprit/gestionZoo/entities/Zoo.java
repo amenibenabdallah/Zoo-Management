@@ -39,15 +39,15 @@ public class Zoo {
         return -1;
 
     }
-   public boolean addAnimal(Animal animal){
+   public void addAnimal(Animal animal){
         if(isZooFull()==false){
             if(searchAnimal(animal)==-1){
                 animals[countAnimal]=animal;
                 countAnimal++;
-                return true;
+
         }
         }
-    return false;
+
     }
 
     public boolean removeAnimal(Animal animal){
