@@ -1,22 +1,12 @@
 package tn.esprit.gestionZoo.main;
 
-import tn.esprit.gestionZoo.entities.Animal;
-import tn.esprit.gestionZoo.entities.Zoo;
-import tn.esprit.gestionZoo.entities.Aquatic;
-import tn.esprit.gestionZoo.entities.Terrestrial;
-import tn.esprit.gestionZoo.entities.Dolphin;
-import tn.esprit.gestionZoo.entities.Penguin;
-
-
+import tn.esprit.gestionZoo.entities.*;
 
 
 public class ZooManagement {
     public static void main(String[] args) {
 
-        Animal test=new Animal();
-        test.setName("testName");
-        test.setFamily("testFamily");
-        test.setMammal(false);
+
 
         Animal lion=new Animal("mammal","lion1",3,true);
         Zoo myZoo=new Zoo("fun tn.esprit.gestionZoo.entities.Zoo","LA");
@@ -24,7 +14,9 @@ public class ZooManagement {
         myZoo.displayZoo();
         System.out.println(myZoo);
         System.out.println(lion);
-        myZoo.addAnimal(test);
+
+
+
 
         myZoo.displayAnimeaux();
 
@@ -54,6 +46,21 @@ public class ZooManagement {
         System.out.println(myZoo.maxPenguinSwimmingDepth());
         myZoo.displayNumberOfAquaticsByType();
         System.out.println(penguin.equals(dolphin));
+
+        //prosit 7
+        try{
+            Animal animal1 = new Animal("mammal","Lion", 5,true);
+            myZoo.addAnimal(animal1);
+            Animal animal2 = new Animal("mammal","Tiger", 3,true);
+            myZoo.addAnimal(animal2);
+            Animal animal3 = new Animal("mammal","Elephant", 10,true);
+            myZoo.addAnimal(animal3);
+            Animal animal4 = new Animal("mammal","Giraffe", 7,true);
+            myZoo.addAnimal(animal4);
+        }
+        catch (ZooFullException e){
+            System.out.println(e.getMessage());
+        }
 
 
 

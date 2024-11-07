@@ -3,7 +3,7 @@ package tn.esprit.gestionZoo.entities;
 public class Zoo {
     private Animal[] animals;
     private String name,city;
-    private final int nbcages=25;
+    private final int nbcages=3;
     private int countAnimal=0;
 
     public Aquatic[] aquaticAnimals;
@@ -39,15 +39,15 @@ public class Zoo {
         return -1;
 
     }
-   public void addAnimal(Animal animal){
-        if(isZooFull()==false){
-            if(searchAnimal(animal)==-1){
-                animals[countAnimal]=animal;
-                countAnimal++;
-
+   public void addAnimal(Animal animal) throws ZooFullException{
+        if(isZooFull()){
+            throw new ZooFullException("zoo is full !!");
         }
-        }
+                if(searchAnimal(animal)==-1){
+                    animals[countAnimal]=animal;
+                    countAnimal++;
 
+                }
     }
 
     public boolean removeAnimal(Animal animal){
