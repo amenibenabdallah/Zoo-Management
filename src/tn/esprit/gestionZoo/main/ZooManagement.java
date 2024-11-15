@@ -77,6 +77,22 @@ public class ZooManagement {
             System.out.println("Invalid age error: " +e.getMessage());
         }
 
+        // prosit 8
+        try {
+            Penguin penguin = new Penguin("Spheniscidae", "Pingu", 3, false, "Antarctic", 25.0f);
+            System.out.println("\nTesting penguin methods:");
+            penguin.eatMeat(Food.MEAT);
+            penguin.eatMeat(Food.PLANT);
+            penguin.eatMeat(Food.BOTH);
+            Terrestrial terrestrial = new Terrestrial("Mammalia", "Elephant", 8, true, 4);
+            System.out.println("\nTesting Terrestrial methods:");
+            terrestrial.eatPlantAndMeet(Food.BOTH);
+            terrestrial.eatPlantAndMeet(Food.PLANT);
+
+        }
+        catch (InvalidAgeException e){
+            System.out.println(e.getMessage());
+        }
 
 
 

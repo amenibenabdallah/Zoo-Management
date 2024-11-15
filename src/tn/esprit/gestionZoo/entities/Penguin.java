@@ -25,6 +25,19 @@ public class Penguin extends Aquatic implements Carnivore <Food> {
 
     @Override
     public void eatMeat(Food meat) {
-
+        switch (meat){
+            case MEAT :
+                System.out.println("This Dolphin animal eats meat.");
+                break;
+            case PLANT:
+                System.out.println("This aquatic animal does not eat plants.");
+                break;
+            case BOTH:
+                System.out.println("This aquatic animal only eats the meat portion.");
+                break;
+            default:
+                System.out.println("Unknown food type.");
+                break;
+        }
     }
 }
