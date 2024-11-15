@@ -1,6 +1,6 @@
 package tn.esprit.gestionZoo.entities;
 
-public class Penguin extends Aquatic {
+public class Penguin extends Aquatic implements Carnivore <Food> {
     float swimmingDepth;
 
     public float getSwimmingDepth(){
@@ -21,5 +21,10 @@ public class Penguin extends Aquatic {
     public Penguin(String family,String name,int age,boolean isMammal,String habitat,float swimmingDepth) throws InvalidAgeException{
         super(family,name,age,isMammal,habitat);
         this.swimmingDepth=swimmingDepth;
+    }
+
+    @Override
+    public void eatMeat(Food meat) {
+
     }
 }

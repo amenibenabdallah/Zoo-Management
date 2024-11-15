@@ -2,7 +2,7 @@ package tn.esprit.gestionZoo.entities;
 
 import java.util.Objects;
 
-public abstract class Aquatic extends Animal {
+public abstract class Aquatic extends Animal implements Carnivore <Food> {
     private String habitat;
 
     public String getHabitat(){
